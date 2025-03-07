@@ -12,6 +12,7 @@ const ShowScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{BlogPost.title}</Text>
+      <Text style={styles.content}>{BlogPost.content}</Text>
     </View>
   );
 };
@@ -22,6 +23,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
+    marginBottom: 10,
+  },
+  content: {
+    fontSize: 18,
   },
 });
 

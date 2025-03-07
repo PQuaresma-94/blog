@@ -14,8 +14,7 @@ const IndexScreen = ({ navigation }) => {
   const { state, addBlogPost, deleteBlogPost } = useContext(BlogContext);
 
   return (
-    <View>
-      <Button title="Add Blog Post" onPress={addBlogPost} />
+    <View style={styles.container}>
       <FlatList
         data={state}
         keyExtractor={(blogPost) => blogPost.title}
@@ -54,12 +53,14 @@ IndexScreen.navigationOptions = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    margin: 15,
+  },
   row: {
     flexDirection: "row",
     justifyContent: "space-between",
     paddingVertical: 20,
     paddingHorizontal: 10,
-    marginHorizontal: 15,
     marginBottom: 10,
     borderWidth: 2,
     borderRadius: 10,
